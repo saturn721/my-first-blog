@@ -116,3 +116,19 @@ python manage.py migrate инициализируем базу данных
 python manage.py createsuperuser создаем суперюзера
 
 
+
+git git git$ git status
+    [...]
+    $ git add --all .
+    $ git status
+    [...]
+    $ git commit -m "Modified templates to display posts from database."
+    [...]
+    $ git push
+Затем заходим на PythonAnywhere, открываем Bash console и набираем команду:
+    $ cd my-first-blog
+    $ git pull
+    [...]
+
+
+
