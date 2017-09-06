@@ -1,28 +1,18 @@
 
+{% extends 'blog/base.html' %}
 {% load staticfiles %}
 
 <html>
 
 
 <head>
-	<title>saturn721</title>
-	
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Личная страница Олега Безгачева">
-    <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
-    <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 </head>	
 <body>
+{% block content %}
 	   <!-- preloader -->
- <!--<div id="page-preloader"><div>loading...</div>
- </div>-->
+ <div id="page-preloader"><div>loading...</div>
+ </div>
     <!-- begin iside -->
     <div class="iside">
         <!-- begin iside-name -->
@@ -192,7 +182,7 @@
                 </div>
 
                 <div class="title-row col-xs-10 col-sm-10 col-md-9 col-lg-3">
-                    БЛОГ
+                    БЛОГ <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
                 </div>
 
 
@@ -202,15 +192,17 @@
                 
             </div>
                 <div class="col-xs-10 col-sm-10 col-md-9 col-lg-3">
-                        {% for post in posts %}
+                
+                    {% for post in posts %}
                         <div class="post">
                         <div class="date">
                             {{ post.published_date }}
                         </div>
-                        <h1><a href="">{{ post.title }}</a></h1>
+                        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
                         <p>{{ post.text|linebreaksbr }}</p>
                         </div>
-                {% endfor %}
+                        {% endfor %}
+                
                      </div>
             </div>
             <div class="row">
@@ -417,7 +409,7 @@
 <script src="{% static 'js/main.js' %}"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+ {% endblock content %}   
 </body>
 
     
