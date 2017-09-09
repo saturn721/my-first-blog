@@ -29,7 +29,6 @@ def message(request):
             # ... сохранение данных в базу
             Ordering.objects.create(author=form['author'], email=form['email'], title=form['title'], text=form['message']).send
             form = {}
-            HttpResponse('Спасибо за ваше сообщение!')
             return render(request, 'message/message.html', {'errors': errors, 'form':form})
 
          

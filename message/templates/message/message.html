@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>messages</title>
-</head>
-<body>
-	{% if errors %}
-        <ul>
-            {% for error in errors %}
-                <li style="color: red;">{{ error }}</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-     
-    <form action="" method="post">
-        <label>Имя</label> 
-        <input name="author" type="text" value="{{ form.author }}">
- 
-        <label>Е-mail</label> 
-        <input name="email" type="email" value="{{ form.email }}">
 
-         <label>Title</label> 
-        <input name="title" type="text" value="{{ form.title }}">
-        <label>Сообщение</label>
-
-        <textarea name="message">{{ form.message }}</textarea>
-         
-        <input type="submit" value="Отправить">
-        {% csrf_token %}
-    </form>
-</body>
-</html>
+{% extends 'index.html' %}
+{% load staticfiles %}
