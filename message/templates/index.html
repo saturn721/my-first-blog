@@ -404,11 +404,17 @@
                     <label for="message">&nbsp;&nbsp;</label>
                     <textarea form="data" name="message" placeholder="Введите здесь ваше сообщение" cols="40" rows="4">{{ form.message }}</textarea>                 
                 </li>
-                
+                <li>
+                    {{ form.as_p }}
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LdZYDAUAAAAAGAMz9NefClsPmsoxiiCbtdjn6wU"></div>
+                </li>
                 <li>
                     <input type="submit" value="Отправить">
                     
                 </li>
+                
             </ul>
             </form>
             

@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'message',
+    'captcha',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,3 +104,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+#reCAPTCHA keys  
+RECAPTCHA_PUBLIC_KEY = '6LdZYDAUAAAAAGAMz9NefClsPmsoxiiCbtdjn6wU'
+RECAPTCHA_PRIVATE_KEY = '6LdZYDAUAAAAAFNdMFViqFwWr6MAhgf-m3uBWwMk'
