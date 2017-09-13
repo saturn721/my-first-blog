@@ -310,7 +310,7 @@ ul.one > li:hover:before {
   padding: 0;
   overflow-x: hidden;
   background-color: transparent;
-  height: 350px;
+  height: 550px;
    }
 
 .contact-form li {
@@ -333,7 +333,10 @@ textarea {
 .contact-form li:hover {
   content: '';
   border-bottom: 2px solid #3971ff; }
-
+.messages {
+  list-style-type: none;
+  color: #3971ff;
+}
 .line {
   height: 8px;
   background-color: grey;
