@@ -47,7 +47,7 @@ def message(request):
             result = json.loads(response.read().decode())
             ''' End reCAPTCHA validation '''
             if result['success']:
-                #Ordering.objects.create(author=form['author'], email=form['email'], title=form['title'], text=form['message']).send
+                Ordering.objects.create(author=form['author'], email=form['email'], title=form['title'], text=form['message']).send
                 messages.success(request, 'Сообщение отправлено!')
                 form = {}
                 #return render(request, 'message/message.html', {'errors': errors, 'form':form})
