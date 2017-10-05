@@ -104,7 +104,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
+#STATIC_ROOT = "/home/saturn/Documents/btc/chess/project/djangogirls/blog/static/"
 
 #reCAPTCHA keys  
 RECAPTCHA_PUBLIC_KEY = '6LdZYDAUAAAAAGAMz9NefClsPmsoxiiCbtdjn6wU'

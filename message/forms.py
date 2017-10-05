@@ -6,5 +6,5 @@ class OrderingForm(forms.ModelForm):
 
     class Meta:
         model = Ordering
-        fields = ('author', 'email', 'title', 'text',)
+        fields = ('author', 'email', 'title', 'message', 'age', 'eye_color', 'rice', 'boobs', 'waist', 'hair_color', 'taz', 'foot')
 

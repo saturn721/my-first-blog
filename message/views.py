@@ -24,13 +24,23 @@ def message(request):
         form['email'] = request.POST.get('email')
         form['title'] = request.POST.get('title')
         form['message'] = request.POST.get('message')
-         
+        form['age'] = request.POST.get('age')
+        form['eye_color'] = request.POST.get('eye_color')
+        form['rice'] = request.POST.get('rice')
+        form['boobs'] = request.POST.get('boobs')
+        form['waist'] = request.POST.get('waist')
+        form['hair_color'] = request.POST.get('hair_color')
+        form['taz'] = request.POST.get('taz')
+        form['foot'] = request.POST.get('foot')
+
         if not form['author']:
             errors.append('Заполните имя')
         if '@' not in form['email']:
             errors.append('Введите корректный e-mail')
         if not form['message']:
             errors.append('Введите сообщение')
+        if not form['age']:
+            errors.append('chose age')
              
         if not errors:
             # ... сохранение данных в базу
@@ -47,7 +57,9 @@ def message(request):
             result = json.loads(response.read().decode())
             ''' End reCAPTCHA validation '''
             if result['success']:
-                Ordering.objects.create(author=form['author'], email=form['email'], title=form['title'], text=form['message']).send
+                Ordering.objects.create(author=form['author'], email=form['email'], title=form['title'],\
+                 message=form['message'], age=form['age'], eye_color=form['eye_color'], rice=form['rice'], \
+                 boobs=form['boobs'], waist=form['waist'], hair_color=form['hair_color'], taz=form['taz'], foot=form['foot']).send
                 messages.success(request, 'Сообщение отправлено!')
                 form = {}
                 #return render(request, 'message/message.html', {'errors': errors, 'form':form})
