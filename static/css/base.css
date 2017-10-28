@@ -110,12 +110,16 @@ body {
   font-size: 19.5px;
 }
 
+.line {
+  display: block !important;
+}
+
 .main {
   margin-top: 15%;
 }
 
 .main:before {
-  content: '\a0\a0\a0мы\a0эфире:\a0 0xe1294c6c668e1b39438067a18f67fe82334ef38b \a0';
+  content: '\a0\a0\a0\a0мы\a0эфире:\a0 0xe1294c6c668e1b39438067a18f67fe82334ef38b \a0';
   width: 102%;
   position: relative;
   height: 34px;
@@ -125,7 +129,7 @@ body {
 }
 
 .main div:nth-child(1) {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 500px;
   border-radius: 6px;
   border: solid 0.1px #B3A679;
@@ -150,7 +154,7 @@ body {
 }
 
 .main div:nth-child(2) {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 500px;
   border-radius: 6px;
   border: solid 0.1px #B3A679;
@@ -175,7 +179,7 @@ body {
 }
 
 .main div:nth-child(3) {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 500px;
   border-radius: 6px;
   border: solid 0.1px #B3A679;
@@ -200,7 +204,7 @@ body {
 }
 
 .main div:nth-child(4) {
-  overflow-x: hidden;
+  overflow: hidden;
   height: 500px;
   border-radius: 6px;
   border: solid 0.1px #B3A679;
@@ -230,8 +234,7 @@ body {
   -ms-transform: rotateY(0deg) translate(0%, 0px) !important;
   -moz-transform: rotateY(0deg) translate(0%, 0px) !important;
   -webkit-transform: rotateY(0deg) translate(0%, 0px) !important;
-  cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
   border: solid 0.1px #664D35 !important;
   box-shadow: 12px 0px 8px 5px #664D35 !important;
   width: 25%;
@@ -243,6 +246,7 @@ body {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   margin-left: 10px;
+  overflow-y: scroll;
   animation: wid 0.1s linear 1 forwards;
   -webkit-animation: wid 0.1s linear 1 forwards;
   -moz-animation: wid 0.1s linear 1 forwards;
@@ -250,6 +254,7 @@ body {
 }
 
 .main div:nth-child(1):focus img {
+  cursor: default;
   float: left;
   max-width: 50%;
 }
@@ -260,8 +265,7 @@ body {
   -ms-transform: rotateY(0deg) translate(-25%, 0px) !important;
   -moz-transform: rotateY(0deg) translate(-25%, 0px) !important;
   -webkit-transform: rotateY(0deg) translate(-25%, 0px) !important;
-  cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
   border: solid 0.1px #664D35 !important;
   box-shadow: 12px 0px 8px 5px #664D35 !important;
   width: 25%;
@@ -273,6 +277,7 @@ body {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   margin-left: 10px;
+  overflow-y: scroll;
   animation: wid 0.1s linear 1 forwards;
   -webkit-animation: wid 0.1s linear 1 forwards;
   -moz-animation: wid 0.1s linear 1 forwards;
@@ -280,6 +285,7 @@ body {
 }
 
 .main div:nth-child(2):focus img {
+  cursor: default;
   float: left;
   max-width: 50%;
 }
@@ -290,8 +296,7 @@ body {
   -ms-transform: rotateY(0deg) translate(-50%, 0px) !important;
   -moz-transform: rotateY(0deg) translate(-50%, 0px) !important;
   -webkit-transform: rotateY(0deg) translate(-50%, 0px) !important;
-  cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
   border: solid 0.1px #664D35 !important;
   box-shadow: 12px 0px 8px 5px #664D35 !important;
   width: 25%;
@@ -303,6 +308,7 @@ body {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   margin-left: 10px;
+  overflow-y: scroll;
   animation: wid 0.1s linear 1 forwards;
   -webkit-animation: wid 0.1s linear 1 forwards;
   -moz-animation: wid 0.1s linear 1 forwards;
@@ -310,6 +316,7 @@ body {
 }
 
 .main div:nth-child(3):focus img {
+  cursor: default;
   float: left;
   max-width: 50%;
 }
@@ -320,8 +327,7 @@ body {
   -ms-transform: rotateY(0deg) translate(-75%, 0px) !important;
   -moz-transform: rotateY(0deg) translate(-75%, 0px) !important;
   -webkit-transform: rotateY(0deg) translate(-75%, 0px) !important;
-  cursor: pointer;
-  z-index: 100;
+  z-index: 1000;
   border: solid 0.1px #664D35 !important;
   box-shadow: 12px 0px 8px 5px #664D35 !important;
   width: 25%;
@@ -333,6 +339,7 @@ body {
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   margin-left: 10px;
+  overflow-y: scroll;
   animation: wid 0.1s linear 1 forwards;
   -webkit-animation: wid 0.1s linear 1 forwards;
   -moz-animation: wid 0.1s linear 1 forwards;
@@ -340,6 +347,7 @@ body {
 }
 
 .main div:nth-child(4):focus img {
+  cursor: default;
   float: left;
   max-width: 50%;
 }
