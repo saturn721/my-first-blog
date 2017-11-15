@@ -67,7 +67,7 @@ def message(request):
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 
          
-    return render(request, 'message/message.html', {'errors': errors, 'form':form})
+    return render(request, 'message/index.html', {'errors': errors, 'form':form})
 
 
 def post_new(request):
