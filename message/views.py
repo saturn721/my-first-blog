@@ -70,6 +70,16 @@ def message(request):
     return render(request, 'message/index.html', {'errors': errors, 'form':form})
 
 
+def list(request):
+    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    return render(request, 'message/index.html', {'posts': posts})
+
+
+def post_detail(request, pk):
+        post = get_object_or_404(Post, pk=pk)
+        return render(request, 'blog/post_detail.html', {'post': post})
+
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)

@@ -1,1 +1,1 @@
-My firsr blog about goldenbloodgirls andy
+My first python blog about goldenbloodgirls andy
