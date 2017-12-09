@@ -128,7 +128,7 @@ body {
   opacity: 0.6;
 }
 
-.main div:nth-child(1) {
+.line {
   overflow: hidden;
   height: 500px;
   border-radius: 6px;
@@ -139,7 +139,6 @@ body {
   -ms-transform: perspective(100px) rotateY(2deg);
   -moz-transform: perspective(100px) rotateY(2deg);
   -webkit-transform: perspective(100px) rotateY(2deg);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eab92d+0,c79810+100;Yellow+3D+%232 */
   background: #eab92d;
   background: -moz-linear-gradient(left, #B3A679 0%, #977E45 100%);
   background: -webkit-linear-gradient(left, #B3A679 0%, #977E45 100%);
@@ -147,209 +146,34 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=1 );
 }
 
-.main div:nth-child(1) img {
+.done {
+  transform: rotateY(0deg) !important;
+  -o-transform: rotateY(0deg) !important;
+  -ms-transform: rotateY(0deg) !important;
+  -moz-transform: rotateY(0deg) !important;
+  -webkit-transform: rotateY(0deg) !important;
   cursor: pointer;
-  float: left;
-  margin: 8px;
-}
-
-.main div:nth-child(2) {
-  overflow: hidden;
-  height: 500px;
-  border-radius: 6px;
-  border: solid 0.1px #B3A679;
-  box-shadow: 0px 0px 8px 5px #B3A679;
-  transform: perspective(100px) rotateY(2deg);
-  -o-transform: perspective(100px) rotateY(2deg);
-  -ms-transform: perspective(100px) rotateY(2deg);
-  -moz-transform: perspective(100px) rotateY(2deg);
-  -webkit-transform: perspective(100px) rotateY(2deg);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eab92d+0,c79810+100;Yellow+3D+%232 */
-  background: #eab92d;
-  background: -moz-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: -webkit-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: linear-gradient(to right, #B3A679 0%, #977E45 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=1 );
-}
-
-.main div:nth-child(2) img {
-  cursor: pointer;
-  float: left;
-  margin: 8px;
-}
-
-.main div:nth-child(3) {
-  overflow: hidden;
-  height: 500px;
-  border-radius: 6px;
-  border: solid 0.1px #B3A679;
-  box-shadow: 0px 0px 8px 5px #B3A679;
-  transform: perspective(100px) rotateY(2deg);
-  -o-transform: perspective(100px) rotateY(2deg);
-  -ms-transform: perspective(100px) rotateY(2deg);
-  -moz-transform: perspective(100px) rotateY(2deg);
-  -webkit-transform: perspective(100px) rotateY(2deg);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eab92d+0,c79810+100;Yellow+3D+%232 */
-  background: #eab92d;
-  background: -moz-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: -webkit-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: linear-gradient(to right, #B3A679 0%, #977E45 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=1 );
-}
-
-.main div:nth-child(3) img {
-  cursor: pointer;
-  float: left;
-  margin: 8px;
-}
-
-.main div:nth-child(4) {
-  overflow: hidden;
-  height: 500px;
-  border-radius: 6px;
-  border: solid 0.1px #B3A679;
-  box-shadow: 0px 0px 8px 5px #B3A679;
-  transform: perspective(100px) rotateY(2deg);
-  -o-transform: perspective(100px) rotateY(2deg);
-  -ms-transform: perspective(100px) rotateY(2deg);
-  -moz-transform: perspective(100px) rotateY(2deg);
-  -webkit-transform: perspective(100px) rotateY(2deg);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eab92d+0,c79810+100;Yellow+3D+%232 */
-  background: #eab92d;
-  background: -moz-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: -webkit-linear-gradient(left, #B3A679 0%, #977E45 100%);
-  background: linear-gradient(to right, #B3A679 0%, #977E45 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=1 );
-}
-
-.main div:nth-child(4) img {
-  cursor: pointer;
-  float: left;
-  margin: 8px;
-}
-
-.main div:nth-child(1):focus {
-  transform: rotateY(0deg) translate(0%, 0px) !important;
-  -o-transform: rotateY(0deg) translate(0%, 0px) !important;
-  -ms-transform: rotateY(0deg) translate(0%, 0px) !important;
-  -moz-transform: rotateY(0deg) translate(0%, 0px) !important;
-  -webkit-transform: rotateY(0deg) translate(0%, 0px) !important;
   z-index: 1000;
   border: solid 0.1px #664D35 !important;
   box-shadow: 12px 0px 8px 5px #664D35 !important;
   width: 25%;
   position: absolute;
-  left: 0%;
   background: #BBA89D !important;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
   margin-left: 10px;
   overflow-y: scroll;
-  animation: wid 0.1s linear 1 forwards;
-  -webkit-animation: wid 0.1s linear 1 forwards;
-  -moz-animation: wid 0.1s linear 1 forwards;
-  -o-animation: wid 0.1s linear 1 forwards;
+  animation: wid 0.2s linear 1 forwards;
+  -webkit-animation: wid 0.2s linear 1 forwards;
+  -moz-animation: wid 0.2s linear 1 forwards;
+  -o-animation: wid 0.2s linear 1 forwards;
 }
 
-.main div:nth-child(1):focus img {
-  cursor: default;
+.done img {
   float: left;
-  max-width: 50%;
-}
-
-.main div:nth-child(2):focus {
-  transform: rotateY(0deg) translate(-25%, 0px) !important;
-  -o-transform: rotateY(0deg) translate(-25%, 0px) !important;
-  -ms-transform: rotateY(0deg) translate(-25%, 0px) !important;
-  -moz-transform: rotateY(0deg) translate(-25%, 0px) !important;
-  -webkit-transform: rotateY(0deg) translate(-25%, 0px) !important;
-  z-index: 1000;
-  border: solid 0.1px #664D35 !important;
-  box-shadow: 12px 0px 8px 5px #664D35 !important;
-  width: 25%;
-  position: absolute;
-  left: 25%;
-  background: #BBA89D !important;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  margin-left: 10px;
-  overflow-y: scroll;
-  animation: wid 0.1s linear 1 forwards;
-  -webkit-animation: wid 0.1s linear 1 forwards;
-  -moz-animation: wid 0.1s linear 1 forwards;
-  -o-animation: wid 0.1s linear 1 forwards;
-}
-
-.main div:nth-child(2):focus img {
-  cursor: default;
-  float: left;
-  max-width: 50%;
-}
-
-.main div:nth-child(3):focus {
-  transform: rotateY(0deg) translate(-50%, 0px) !important;
-  -o-transform: rotateY(0deg) translate(-50%, 0px) !important;
-  -ms-transform: rotateY(0deg) translate(-50%, 0px) !important;
-  -moz-transform: rotateY(0deg) translate(-50%, 0px) !important;
-  -webkit-transform: rotateY(0deg) translate(-50%, 0px) !important;
-  z-index: 1000;
-  border: solid 0.1px #664D35 !important;
-  box-shadow: 12px 0px 8px 5px #664D35 !important;
-  width: 25%;
-  position: absolute;
-  left: 50%;
-  background: #BBA89D !important;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  margin-left: 10px;
-  overflow-y: scroll;
-  animation: wid 0.1s linear 1 forwards;
-  -webkit-animation: wid 0.1s linear 1 forwards;
-  -moz-animation: wid 0.1s linear 1 forwards;
-  -o-animation: wid 0.1s linear 1 forwards;
-}
-
-.main div:nth-child(3):focus img {
-  cursor: default;
-  float: left;
-  max-width: 50%;
-}
-
-.main div:nth-child(4):focus {
-  transform: rotateY(0deg) translate(-75%, 0px) !important;
-  -o-transform: rotateY(0deg) translate(-75%, 0px) !important;
-  -ms-transform: rotateY(0deg) translate(-75%, 0px) !important;
-  -moz-transform: rotateY(0deg) translate(-75%, 0px) !important;
-  -webkit-transform: rotateY(0deg) translate(-75%, 0px) !important;
-  z-index: 1000;
-  border: solid 0.1px #664D35 !important;
-  box-shadow: 12px 0px 8px 5px #664D35 !important;
-  width: 25%;
-  position: absolute;
-  left: 75%;
-  background: #BBA89D !important;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  margin-left: 10px;
-  overflow-y: scroll;
-  animation: wid 0.1s linear 1 forwards;
-  -webkit-animation: wid 0.1s linear 1 forwards;
-  -moz-animation: wid 0.1s linear 1 forwards;
-  -o-animation: wid 0.1s linear 1 forwards;
-}
-
-.main div:nth-child(4):focus img {
-  cursor: default;
-  float: left;
-  max-width: 50%;
+  max-width: 70%;
 }
 
 @-webkit-keyframes wid {
