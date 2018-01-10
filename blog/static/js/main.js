@@ -10,22 +10,36 @@ $(window).on('load', function() {
   });
 }).call(this);
 
-$(document).ready(function() {
 
-  function movel(){
-  $(this).toggleClass('done'); 
-  $(this).toggleClass('line');//will toggle the class (add it if doesn't have it or remove it if it does)
-  //$(this).css({ x: '100px' });
+function movel(){
+    //console.log(document.classList.contains("example"));
+    this.classList.toggle('done');
+    this.classList.toggle('line');
+    var tr = this.classList.contains('done');
+    console.log(tr);
+    if (tr == true)
+    {
+      $(document.getElementsByClassName('line')).css('opacity', '.1');
+    }
+    else 
+    {
+      $(document.getElementsByClassName('line')).css('opacity', '1');
+    }
+    
+
+    //will toggle the class (add it if doesn't have it or remove it if it does)
+ 
   };
 
-  $('.blinds').trigger('click');
 
+
+$(document).ready(function() {
+  $('.line').css({ perspective: 100, rotateY: 2 });
+  
+  $('.blinds').trigger('click');
+  
   $('.blinds').on('click', movel);
 
-  
 
 });
-
-
-
 
