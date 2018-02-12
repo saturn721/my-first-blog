@@ -216,6 +216,52 @@ body {
   }
 }
 
+@-o-keyframes line1 {
+  0% {
+    font-weight: 100;
+    line-height: 10;
+  }
+  25% {
+    font-weight: 200;
+    line-height: 8;
+  }
+  50% {
+    font-weight: 300;
+    line-height: 6;
+  }
+  75% {
+    font-weight: 400;
+    line-height: 4;
+  }
+  100% {
+    font-weight: 500;
+    line-height: 2;
+  }
+}
+
+@-keyframes line1 {
+  0% {
+    font-weight: 100;
+    line-height: 10;
+  }
+  25% {
+    font-weight: 200;
+    line-height: 8;
+  }
+  50% {
+    font-weight: 300;
+    line-height: 6;
+  }
+  75% {
+    font-weight: 400;
+    line-height: 4;
+  }
+  100% {
+    font-weight: 500;
+    line-height: 2;
+  }
+}
+
 .done img {
   float: left;
   max-width: 70%;
@@ -324,7 +370,7 @@ body {
   }
 }
 
-@-o-keyframes {
+@-o-keyframes wid {
   0% {
     width: 10%;
   }
