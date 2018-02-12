@@ -16,15 +16,8 @@ function movel(){
     this.classList.toggle('line');
     var tr = this.classList.contains('done');
     console.log(tr);
-    if (tr == true)
-    {
-      $(document.getElementsByClassName('line')).css('opacity', '.1');
-    }
-    else 
-    {
-      $(document.getElementsByClassName('line')).css('opacity', '1');
-    }
-    
+    (tr == true) ? $(document.getElementsByClassName('line')).css('opacity', '0') : $(document.getElementsByClassName('line')).css('opacity', '1');
+    // test ? operator  
 
     //will toggle the class (add it if doesn't have it or remove it if it does)
  

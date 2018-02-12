@@ -139,7 +139,6 @@ body {
   background: -webkit-linear-gradient(left, #B3A679 0%, #977E45 100%);
   background: linear-gradient(to right, #B3A679 0%, #977E45 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eab92d', endColorstr='#c79810',GradientType=1 );
-
 }
 
 .done {
@@ -160,17 +159,103 @@ body {
   -o-transition: all 0.5s linear;
   margin-left: 10px;
   overflow-y: scroll;
-  animation: wid 0.2s linear 1 forwards;
-  -webkit-animation: wid 0.2s linear 1 forwards;
-  -moz-animation: wid 0.2s linear 1 forwards;
-  -o-animation: wid 0.2s linear 1 forwards;
+  animation: wid 0.2s linear forwards !important;
+  -webkit-animation: wid 0.2s linear forwards;
+  -moz-animation: wid 0.2s linear forwards;
+  -o-animation: wid 0.2s linear forwards;
 }
 
+@-webkit-keyframes line1 {
+  0% {
+    text-shadow: 0px 13px 3px grey;
+    font-weight: 100;
+    line-height: 10;
+  }
+  25% {
+    text-shadow: 0 10px 3px grey;
+    font-weight: 200;
+    line-height: 8;
+  }
+  50% {
+    text-shadow: 0px 7px 3px grey;
+    font-weight: 300;
+    line-height: 6;
+  }
+  75% {
+    text-shadow: 0px 4px 3px grey;
+    font-weight: 400;
+    line-height: 4;
+  }
+  100% {
+    text-shadow: 0px 1px 3px grey;
+    font-weight: 500;
+    line-height: 2;
+  }
+}
 
+@-moz-keyframes line1 {
+  0% {
+    font-weight: 100;
+    line-height: 10;
+  }
+  25% {
+    font-weight: 200;
+    line-height: 8;
+  }
+  50% {
+    font-weight: 300;
+    line-height: 6;
+  }
+  75% {
+    font-weight: 400;
+    line-height: 4;
+  }
+  100% {
+    font-weight: 500;
+    line-height: 2;
+  }
+}
 
 .done img {
   float: left;
   max-width: 70%;
+}
+
+.done p {
+  animation: line1 1.5s linear forwards !important;
+}
+
+@-keyframes wid {
+  0% {
+    width: 10%;
+  }
+  10% {
+    width: 20%;
+  }
+  30% {
+    width: 30%;
+  }
+  40% {
+    width: 40%;
+  }
+  50% {
+    width: 50%;
+  }
+  60% {
+    width: 60%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    width: 80%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @-webkit-keyframes wid {
@@ -207,6 +292,39 @@ body {
 }
 
 @-moz-keyframes wid {
+  0% {
+    width: 10%;
+  }
+  10% {
+    width: 20%;
+  }
+  30% {
+    width: 30%;
+  }
+  40% {
+    width: 40%;
+  }
+  50% {
+    width: 50%;
+  }
+  60% {
+    width: 60%;
+  }
+  70% {
+    width: 70%;
+  }
+  80% {
+    width: 80%;
+  }
+  90% {
+    width: 90%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-o-keyframes {
   0% {
     width: 10%;
   }
