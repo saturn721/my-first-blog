@@ -25,7 +25,7 @@ SECRET_KEY = 'f&jz5@c-g0$649p(jtxozcuy19076n!d66kh!d4ruk%&7&ol&#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'saturn721.pythonanywhere.com']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'blog',
     'message',
-    'captcha',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,7 +108,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 
-#reCAPTCHA keys  
+#reCAPTCHA keys
 RECAPTCHA_PUBLIC_KEY = '6LdZYDAUAAAAAGAMz9NefClsPmsoxiiCbtdjn6wU'
 RECAPTCHA_PRIVATE_KEY = '6LdZYDAUAAAAAFNdMFViqFwWr6MAhgf-m3uBWwMk'
-
