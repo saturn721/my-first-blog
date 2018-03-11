@@ -11,6 +11,10 @@ def list(request):
     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
     return render(request, 'blog/list.html', {'posts': posts})
 
+def listru(request):
+    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
+    return render(request, 'blog/listru.html', {'posts': posts})
+
 
 def post_detail(request, pk):
         post = get_object_or_404(Post, pk=pk)

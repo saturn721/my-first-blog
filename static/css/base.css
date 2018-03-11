@@ -446,6 +446,19 @@ textarea {
   font-size: 24px;
 }
 
+.messages {
+    color: white;
+    list-style-type: none;
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    font-size: 60px;
+}
+
+#back {
+    font-size: 40px !important;
+}
+
 .instruction {
   padding: 0 40px 0 40px;
 }

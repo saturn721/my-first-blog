@@ -19,7 +19,7 @@ def message(request):
     errors = []
     form = {}
     if request.POST:
-         
+
         form['author'] = request.POST.get('author')
         form['email'] = request.POST.get('email')
         form['title'] = request.POST.get('title')
@@ -41,7 +41,7 @@ def message(request):
             errors.append('Введите сообщение')
         if not form['age']:
             errors.append('chose age')
-             
+
         if not errors:
             # ... сохранение данных в базу
             ''' Begin reCAPTCHA validation '''
@@ -61,22 +61,22 @@ def message(request):
                  message=form['message'], age=form['age'], eye_color=form['eye_color'], rice=form['rice'], \
                  boobs=form['boobs'], waist=form['waist'], hair_color=form['hair_color'], taz=form['taz'], foot=form['foot']).send
                 messages.success(request, 'Сообщение отправлено!')
+                messages.success(request, ' Message send!')
+
                 form = {}
                 #return render(request, 'message/message.html', {'errors': errors, 'form':form})
             else:
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
 
-         
-    return render(request, 'message/index.html', {'errors': errors, 'form':form})
+
+    return render(request, 'message/request.html', {'errors': errors, 'form':form})
 
 
 def list(request):
     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
-    return render(request, 'message/index.html', {'posts': posts})
+    return render(request, 'message/en/index.html', {'posts': posts})
 
 
 def post_detail(request, pk):
         post = get_object_or_404(Post, pk=pk)
         return render(request, 'blog/post_detail.html', {'post': post})
-
-
