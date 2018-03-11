@@ -4,7 +4,8 @@ from .models import Ordering
 from .forms import OrderingForm
 from django.utils import timezone
 from django.shortcuts import render, get_object_or_404, redirect
-import urllib
+import urllib.request 
+#import urllib
 #import urllib2
 import json
 from django.conf import settings

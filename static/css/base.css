@@ -459,6 +459,10 @@ textarea {
     font-size: 40px !important;
 }
 
+#flag {
+    margin: 0px;
+    padding: 0px;
+
 .instruction {
   padding: 0 40px 0 40px;
 }
