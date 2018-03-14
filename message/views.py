@@ -63,10 +63,10 @@ def message(request):
                  messages.success(request, 'Сообщение отправлено!')
                  messages.success(request, ' Message send!')
                  print("message done")
-
                  form = {}
-                 #return render(request, 'message/message.html', {'errors': errors, 'form':form})
+                 return render(request, 'message/request.html', {'errors': errors, 'form':form})
              else:
-                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-        print('ho, ho, ho')
-        return render(request, 'message/request.html', {'errors': errors, 'form':form})
+                 print('ho, ho, ho')
+                 return render(request, 'message/en/index.html', {'errors': errors, 'form':form})
+
+    return render(request, 'message/en/index.html', {'errors': errors, 'form':form})
