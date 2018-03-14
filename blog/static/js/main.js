@@ -1,16 +1,16 @@
 
 
-//бывыший прелоадер
- // $('.antispam').on('click', enter );
- //
- //
- // function enter(){
- //     var $preloader, $spinner;
- //     $preloader = $('#page-preloader');
- //     $spinner = $('.antispam');// animation preloader
- //     $spinner.fadeOut();
- //     return $preloader.delay(400).slideUp(2000);
- // };
+
+  $('.antispam').on('click', enter );
+
+
+  function enter(){
+      var $preloader, $spinner;
+      $preloader = $('#page-preloader');
+      $spinner = $('.antispam');// animation preloader
+      $spinner.fadeOut();
+      return $preloader.delay(400).slideUp(2000);
+  };
 
 
 

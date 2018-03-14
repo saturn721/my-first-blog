@@ -3,9 +3,10 @@ from . import views
 
 
 urlpatterns = [
-    url(r'en/', views.listen, name='listen'),#ищет представление в views.py
+    url(r'^$', views.listen, name='listen'),
+    
     url(r'ru/', views.listru, name='listru'),
-    url(r'', include('enter.urls')),
+
 
 
 

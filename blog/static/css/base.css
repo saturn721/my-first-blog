@@ -31,10 +31,12 @@ body {
 
 }
 
-#page-preloader form {
+#page-preloader i {
  font-size: 70px;
  position: absolute;
  cursor: pointer;
+ left: 50%;
+ top: 50%;
 }
 
 .navbar {
@@ -295,7 +297,7 @@ body {
     line-height: 4;
   }
   100% {
-    
+
     font-weight: 500;
     line-height: 2;
   }
