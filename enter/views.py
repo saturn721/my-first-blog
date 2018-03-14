@@ -16,7 +16,11 @@ def enter(request):
         form['token'] = request.POST.get('token') #take token from hidden input form
         token = form['token']
         print(token)
+<<<<<<< Updated upstream
         enter_date = {'secret': '', 'token': token, 'hashes': 256}
+=======
+        enter_date = {'secret': 'fe6ri5jt15bDX5PqfZjaOsdfOLXv0wk6', 'token': token, 'hashes': 256}
+>>>>>>> Stashed changes
         data = urllib.parse.urlencode(enter_date).encode()
         req = urllib.request.Request('https://api.coinhive.com/token/verify', data = data)
         response = urllib.request.urlopen(req)
