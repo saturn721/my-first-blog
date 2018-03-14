@@ -31,13 +31,10 @@ body {
 
 }
 
-#page-preloader i {
-  font-size: 70px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin: -35px 0 0 -35px;
-  cursor: pointer;
+#page-preloader form {
+ font-size: 70px;
+ position: absolute;
+ cursor: pointer;
 }
 
 .navbar {
@@ -128,7 +125,116 @@ body {
   background-color: #DDDDDD;
   z-index: 1000;
   opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ animation-name: presentation;
+ animation-duration: 60s;
+ animation-timing-function: step-end;
+ animation-iteration-count: infinite;
+ animation-fill-mode: both;
+
+ counter-reset: my-counter;
 }
+
+@keyframes presentation {
+  0% {
+    content: open-quote "Это всегда случается" close-quote;
+  }
+
+  5% {
+    content:  "Этого всегда хочется";
+  }
+
+  10% {
+    content: "Жизнь не стоит жадности";
+
+    counter-increment: my-counter;
+  }
+
+  15% {
+    content: "Помогите нам, мы поможем вам";
+  }
+
+  20% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b";
+  }
+
+  25% {
+    content: "Life is greed";
+
+    counter-increment: my-counter 2;
+  }
+
+  30% {
+    content: "Не скупитесь";
+  }
+
+  35% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b ";
+  }
+
+  40% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b ";
+  }
+
+  45% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b ";
+  }
+
+  50% {
+    content: "Ничего личного, просто подаяние";
+
+    counter-increment: my-counter 3;
+  }
+
+  55% {
+    content: "И жертва вернется";
+  }
+
+  60% {
+    content: "Добро ответит оргазмом";
+  }
+
+  65% {
+    content: open-quote "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b " close-quote;
+  }
+
+  70% {
+    content: "Life is greed";
+
+    counter-increment: my-counter 4;
+  }
+
+  75% {
+    content: "И в вашей постели будет праздник";
+  }
+
+  80% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b" ;
+
+    font-family: "Underdog", cursive;
+  }
+
+  85% {
+    content: "Life is greed";
+
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+    counter-increment: my-counter 5;
+  }
+
+  90% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b";
+  }
+
+  95%,
+  100% {
+    content: "мы в эфире - 0xe1294c6c668e1b39438067a18f67fe82334ef38b";
+  }
+}
+
+
 
 .line {
   overflow: hidden;
@@ -189,7 +295,7 @@ body {
     line-height: 4;
   }
   100% {
-    text-shadow: 0px 1px 3px grey;
+    
     font-weight: 500;
     line-height: 2;
   }
