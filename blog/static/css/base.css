@@ -575,6 +575,11 @@ textarea {
   padding: 0 40px 0 40px;
 }
 
+iframe {
+  height: 100%;
+  width: 100%;
+}
+
 @media screen and (max-width: 320px) {
   .main {
     margin-top: 3%;

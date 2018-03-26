@@ -17,3 +17,6 @@ def listen(request):
 def listru(request):
     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('created_date')
     return render(request, 'blog/listru.html', {'posts': posts})
+
+def zalipon(request):
+    return render(request, 'blog/zalipon.html')

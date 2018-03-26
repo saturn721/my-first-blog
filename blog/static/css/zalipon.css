@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Exo+2|Playfair+Display");
+body {
+  font-family: "Exo 2", serif;
+  line-height: 1.7;
+  padding-top: 52px;
+  background-color: #C7BA91;
+  background-image: url("../img/woman.jpg");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  background-size: 100% auto;
+  width: 100%;
+  height: 650px;
+  backface-visibility: hidden;
+  overflow-x: hidden;
+}
+
+.cell {
+  background: transparent;
+  display: inline-block;
+  width: 25%;
+  height: 25%;
+  margin-left: -4px;
+  margin-bottom: -7px;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.antispam {
+  color: red;
+}
+
+div .outer {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 10px;
+  background: #a90329;
+  background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #17010f 0%, #17010f 47%, #8f0222 71%, #8f0222 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #a90329), color-stop(0%, #17010f), color-stop(47%, #17010f), color-stop(71%, #8f0222), color-stop(100%, #8f0222));
+  background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%, #17010f 0%, #17010f 47%, #8f0222 71%, #8f0222 100%);
+  background: -o-radial-gradient(center, ellipse cover, #a90329 0%, #17010f 0%, #17010f 47%, #8f0222 71%, #8f0222 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #a90329 0%, #17010f 0%, #17010f 47%, #8f0222 71%, #8f0222 100%);
+  background: radial-gradient(ellipse at center, #a90329 0%, #17010f 0%, #17010f 47%, #8f0222 71%, #8f0222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#8f0222', GradientType=1 );
+  opacity: 1;
+  -webkit-box-shadow: 0px 0px 5px 2px #6b0318;
+  -moz-box-shadow: 0px 0px 5px 2px #6b0318;
+  box-shadow: 0px 0px 5px 2px #6b0318;
+}
+
+div .inner {
+  border-radius: 6px;
+  background: #4c4c4c;
+  background: -moz-radial-gradient(center, ellipse cover, #4c4c4c 0%, #111111 0%, #474747 6%, #595959 12%, #666666 25%, black 70%, #2c2c2c 80%, #131313 96%, #131313 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #4c4c4c), color-stop(0%, #111111), color-stop(6%, #474747), color-stop(12%, #595959), color-stop(25%, #666666), color-stop(70%, black), color-stop(80%, #2c2c2c), color-stop(96%, #131313), color-stop(100%, #131313));
+  background: -webkit-radial-gradient(center, ellipse cover, #4c4c4c 0%, #111111 0%, #474747 6%, #595959 12%, #666666 25%, black 70%, #2c2c2c 80%, #131313 96%, #131313 100%);
+  background: -o-radial-gradient(center, ellipse cover, #4c4c4c 0%, #111111 0%, #474747 6%, #595959 12%, #666666 25%, black 70%, #2c2c2c 80%, #131313 96%, #131313 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #4c4c4c 0%, #111111 0%, #474747 6%, #595959 12%, #666666 25%, black 70%, #2c2c2c 80%, #131313 96%, #131313 100%);
+  background: radial-gradient(ellipse at center, #4c4c4c 0%, #111111 0%, #474747 6%, #595959 12%, #666666 25%, black 70%, #2c2c2c 80%, #131313 96%, #131313 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=1 );
+  opacity: 0.9 !important;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  animation: slave 1s linear infinite !important;
+}
+
+@-webkit-keyframes slave {
+  0% {
+    top: 22%;
+    left: 22.7%;
+  }
+  10% {
+    top: 20%;
+    left: 23%;
+  }
+  20% {
+    top: 19%;
+    left: 22.5%;
+    top: 19%;
+  }
+  30% {
+    top: 20%;
+    left: 22.2%;
+  }
+  40% {
+    top: 22%;
+    left: 23%;
+  }
+  50% {
+    top: 23%;
+    left: 22.2%;
+  }
+  60% {
+    top: 19%;
+    left: 22.5%;
+  }
+  70% {
+    top: 20%;
+    left: 22.2%;
+  }
+  80% {
+    top: 21%;
+    left: 22%;
+  }
+  90% {
+    top: 20%;
+    left: 22.2%;
+  }
+  100% {
+    top: 22%;
+    left: 22.5%;
+  }
+}
+
+#tor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+}
