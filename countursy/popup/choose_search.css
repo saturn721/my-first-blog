@@ -1,0 +1,48 @@
+html, body {
+  width: 120px;
+}
+
+.button {
+  margin: 3% auto;
+  padding: 4px;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: #CFF2F2;
+}
+.prepare {
+ background-color: #E5F2F1;
+}
+.start {
+ background-color: #E5F2F2;
+}
+
+.clear {
+ background-color: #FBFBC9;
+}
+
+.clear:hover {
+ background-color: #EAEAC9;
+}
+
+.play {
+ background-color: #FBFBC7;
+}
+
+.play:hover {
+  background-color: #CFF2F6;
+}
+
+.pause {
+ background-color: #FBFBC7;
+}
+
+.pause:hover {
+ background-color: #FBFBC5;
+}
+.prepare:active {
+ background-color: black;
+}

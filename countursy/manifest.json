@@ -1,0 +1,35 @@
+{
+
+  "manifest_version": 2,
+  "name": "Countursy",
+  "version": "1.0",
+
+  "description": "Search countur object, face etc",
+  "homepage_url": "http://www.google.com",
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "permissions": [
+    "activeTab",
+    "<all_urls>",
+    "tabs"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/beasts-32.png",
+    "default_title": "Countursy",
+    "default_popup": "popup/choose_search.html",
+    "browser_style": true
+},
+
+  "content_scripts": [
+      {
+        "js": ["/content_scripts/tracking/build/tracking.js", "/content_scripts/tracking/build/data/face.js", "/content_scripts/dat.gui/build/dat.gui.js"],
+        "matches": ["<all_urls>"],
+        "match_about_blank": false,
+        "all_frames": true
+      }
+    ]
+
+}
