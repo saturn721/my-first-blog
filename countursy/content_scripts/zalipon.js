@@ -6,6 +6,7 @@
 
    var video = document.getElementById('video');
    var canvas = document.getElementById('canvas');
+   canvas.style.position = "absolute"; // это главное, без него не работает..
    var context = canvas.getContext('2d');
    var tracker = new tracking.ObjectTracker('face');
     tracker.setInitialScale(4);
