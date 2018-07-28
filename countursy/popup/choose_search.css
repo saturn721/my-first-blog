@@ -11,7 +11,7 @@ html, body {
 }
 
 .start:hover {
-  background-color: #CFF2F2;
+  background-color: #EAEAC9;
 }
 .prepare {
  background-color: #E5F2F1;
@@ -33,7 +33,7 @@ html, body {
 }
 
 .play:hover {
-  background-color: #CFF2F6;
+  background-color: #EAEAC9;
 }
 
 .pause {
@@ -41,8 +41,8 @@ html, body {
 }
 
 .pause:hover {
- background-color: #FBFBC5;
+ background-color: #EAEAC9;
 }
-.prepare:active {
- background-color: black;
+.prepare:hover {
+ background-color: #EAEAC9;
 }

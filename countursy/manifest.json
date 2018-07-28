@@ -17,7 +17,7 @@
   ],
 
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
+    "default_icon": "icons/face-32.png",
     "default_title": "Countursy",
     "default_popup": "popup/choose_search.html",
     "browser_style": true
