@@ -5,7 +5,7 @@ var pause = document.getElementById('pause');
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("start")) {
       browser.tabs.executeScript(null, {
-        file: "/content_scripts/zalipon.js"
+        file: "/content_scripts/facetab.js"
     });
 
   }

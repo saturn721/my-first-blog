@@ -5,9 +5,16 @@
   "version": "0.1",
 
   "description": "Search countur object, face etc",
-  "homepage_url": "http://www.google.com",
+  "homepage_url": "https://github.com/saturn721/my-first-blog",
   "icons": {
-    "48": "icons/beasts-48.png"
+    "32": "icons/face-32.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "countursy@saturn721.addons.mozilla.org",
+      "strict_min_version": "48.0"
+    }
   },
 
   "permissions": [
@@ -25,7 +32,7 @@
 
   "content_scripts": [
       {
-        "js": ["/content_scripts/tracking/build/tracking.js", "/content_scripts/tracking/build/data/face.js", "/content_scripts/dat.gui/build/dat.gui.js"],
+        "js": ["/content_scripts/tracking/build/tracking.js", "/content_scripts/tracking/build/data/face.js"],
         "matches": ["<all_urls>"],
         "match_about_blank": false,
         "all_frames": true
