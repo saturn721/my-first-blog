@@ -8,6 +8,7 @@
    var canvas = document.getElementById('canvas');
    canvas.style.position = "absolute"; // это главное, без него не работает..
    var context = canvas.getContext('2d');
+   // @dev tracker objects
    var tracker = new tracking.ObjectTracker('face');
     tracker.setInitialScale(4);
     tracker.setStepSize(2);
@@ -31,6 +32,7 @@
 
 
  };
+ // @dev Now is off, in theory allows chang variables in flow
  function guido(tracker){
      var gui = new dat.GUI();
      gui.domElement.style.marginTop ="100px";//опускаем контейнер с переменными

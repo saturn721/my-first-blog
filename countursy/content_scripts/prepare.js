@@ -1,3 +1,4 @@
+// @dev function prepare web page to track object. Find video, insert canvas...
 function prepare(){
     var v = document.getElementsByTagName('video');
     var vi = v[0];

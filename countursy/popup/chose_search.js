@@ -1,6 +1,6 @@
 
 var pause = document.getElementById('pause');
-
+// @dev logic work. Prepare, start, pause track
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("start")) {

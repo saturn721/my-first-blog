@@ -4,7 +4,7 @@
   "name": "Countursy",
   "version": "0.1",
 
-  "description": "Search countur object, face etc",
+  "description": "Search countur face in video stream. Press 'prepare', and press start.",
   "homepage_url": "https://github.com/saturn721/my-first-blog",
   "icons": {
     "32": "icons/face-32.png"
