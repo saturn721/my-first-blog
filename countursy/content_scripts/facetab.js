@@ -1,15 +1,33 @@
 
 
- function getVideo() {
+function notify(request, sender, sendResponse){
+    var i = ['face'];
+    switch(request.message){
+        case 'face':
+        i = ['face', 'eye', 'mouth'];
+          break;
+        case 'eye':
+        i.push('eye');
+         break;
+        case 'mouth':
+        i.push('mouth');
+         break;
+         default:
+         i = ['face', 'eye', 'mouth'];
+       }
+    getVideo(i);
+    browser.runtime.onMessage.removeListener(notify);
+    console.log(i);
+    }
 
-
+ function getVideo(myselect) {
 
    var video = document.getElementById('video');
    var canvas = document.getElementById('canvas');
    canvas.style.position = "absolute"; // это главное, без него не работает..
    var context = canvas.getContext('2d');
    // @dev tracker objects
-   var tracker = new tracking.ObjectTracker('face');
+   var tracker = new tracking.ObjectTracker(myselect);
     tracker.setInitialScale(4);
     tracker.setStepSize(2);
     tracker.setEdgesDensity(0.1);
@@ -26,18 +44,8 @@
         context.fillText('y: ' + rect.y + 'пик', rect.x + rect.width + 5, rect.y + 22);
       });
     });
-
-    //guido(tracker);
  video.play();
-
-
  };
- // @dev Now is off, in theory allows chang variables in flow
- function guido(tracker){
-     var gui = new dat.GUI();
-     gui.domElement.style.marginTop ="100px";//опускаем контейнер с переменными
-     gui.add(tracker, 'edgesDensity', 0.1, 0.5).step(0.01);
-     gui.add(tracker, 'initialScale', 1.0, 10.0).step(0.1);
-     gui.add(tracker, 'stepSize', 1, 5).step(0.1);
- };
-window.onload = getVideo();
+browser.runtime.onMessage.addListener(notify);
+//setTimeout(getVideo(myselect), 1000);
+//window.onload = getVideo(myselect);

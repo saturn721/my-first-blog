@@ -7,8 +7,14 @@ document.addEventListener("click", (e) => {
       browser.tabs.executeScript(null, {
         file: "/content_scripts/facetab.js"
     });
+      var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
+     var myselect = document.getElementById('myselect').value;
+      gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, {message: myselect});
+    });
 
   }
+
   else if (e.target.classList.contains("prepare")) {
       browser.tabs.executeScript(null, {
         file: "/content_scripts/prepare.js"
